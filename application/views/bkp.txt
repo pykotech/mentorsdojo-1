@@ -1,0 +1,31 @@
+
+				echo "<a href=\"#\">";
+				echo '<img alt="profile image"all" src="'..'"/>';
+				echo "</a>";  
+		
+				echo '<div class="group-info">';
+				
+				echo '<p><b>';
+					echo $info['name'];
+				?>
+				</b>
+				</p>
+				<p>Worked with (industries):
+				<?php 
+						
+				 echo $info['industries'];
+				?>
+				</p>
+				<p>
+				<?php
+				//Freelancing, PHP, JavaScript, jQuery
+				echo $info['interests'];
+				?>
+		  </p>
+		  <br/>
+		<p>
+			<a href="<?php echo site_url('users/profile') . "/" . $info['id']; ?>">	Show Profile
+			</a>
+		</p>
+		</div>
+		<?ph
