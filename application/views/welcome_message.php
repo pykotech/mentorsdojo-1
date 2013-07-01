@@ -1,69 +1,88 @@
-<!DOCTYPE html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title> Welcome to Mentors Dojo!</title>
- <meta name="description" content="Connect mentor and mentee startups" />
+	<meta charset="utf-8">
+	<title>Welcome to CodeIgniter</title>
 
-  <link href="<?php echo base_url(); ?>stylesheet.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="<?php echo base_url(); ?>css/style.css" media="screen" rel="stylesheet" type="text/css" />
-  <script src="<?php echo base_url(); ?>js/jquery.js" type="text/javascript"></script>
-  
- <!-- put ga tracking here-->
-</head>
+	<style type="text/css">
 
-<body>
- <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="<?php echo base_url(); ?>"><img src="../images/mentors-dojo-logo.png"></a>
+	::selection{ background-color: #E13300; color: white; }
+	::moz-selection{ background-color: #E13300; color: white; }
+	::webkit-selection{ background-color: #E13300; color: white; }
 
-          <div class="nav-collapse">
-          	<?php 
-          	$this->load->view('nav');
-          	?>
-          </div><!--/.nav-collapse -->
-        
-        </div>
-      </div>
-    </div>
-<div id="wrapper">
-<div id="container">
-<div class="header"><img src="../images/mentors-dojo.png" /></div>
-<h3><!--<i class="icon-user	icon-white"></i>-->[BETA] Need help? Ask your mentors!<span class="right"><a href="<?php echo site_url('how_it_works'); ?>">How it works</a></span></h3>
-<?php if($this->session->userdata('username')): ?>
-<div class="pagination">
-<ul class="page-num">
-	<li><a href="<?php echo site_url('welcome'); ?>">Mentor List</a></li>
-	<li><a href="<?php echo site_url('mentees_list'); ?>">Mentee List</a></li>
-</ul>
-<?php endif; ?>
-</div>
+	body {
+		background-color: #fff;
+		margin: 40px;
+		font: 13px/20px normal Helvetica, Arial, sans-serif;
+		color: #4F5155;
+	}
 
-<div id="group-wrapper">
-<?php if(isset($profiles))
-{
-    //print_r($profiles);
-    
-    foreach($profiles as $info) 
-    {
+	a {
+		color: #003399;
+		background-color: transparent;
+		font-weight: normal;
+	}
+
+	h1 {
+		color: #444;
+		background-color: transparent;
+		border-bottom: 1px solid #D0D0D0;
+		font-size: 19px;
+		font-weight: normal;
+		margin: 0 0 14px 0;
+		padding: 14px 15px 10px 15px;
+	}
+
+	code {
+		font-family: Consolas, Monaco, Courier New, Courier, monospace;
+		font-size: 12px;
+		background-color: #f9f9f9;
+		border: 1px solid #D0D0D0;
+		color: #002166;
+		display: block;
+		margin: 14px 0 14px 0;
+		padding: 12px 10px 12px 10px;
+	}
+
+	#body{
+		margin: 0 15px 0 15px;
+	}
 	
-       echo '<div class="group-info "><center><a href="'.site_url('profiles/show') . "/" . $info['mem_id'].'"><img class="profile-img" src="'. $info['gravatar']. '"></a></center><h5>';
-					echo '<a href="'.site_url('profiles/show') . "/" . $info['mem_id'].'">'.$info['fullname'].'</a>';
-				?></h5><p>Can mentor about:<br>
-        <?php 
-        if(!empty($info['industries'])) echo substr($info['industries'], 0, 50);
-        ?><br /><br />
-        <?php
-        //Freelancing, PHP, JavaScript, jQuery
-        if(!empty($info['expertise'])) echo substr($info['expertise'],0,30)."..."; ?></p>
-    <div class="show-prof"><a href="<?php echo site_url('profiles/show') . "/" . $info['mem_id']; ?>">Show Profile</a></div></div>
-    <?php
-      }
-}
-else{ echo "No such profile found"; }?>
+	p.footer{
+		text-align: right;
+		font-size: 11px;
+		border-top: 1px solid #D0D0D0;
+		line-height: 32px;
+		padding: 0 10px 0 10px;
+		margin: 20px 0 0 0;
+	}
+	
+	#container{
+		margin: 10px;
+		border: 1px solid #D0D0D0;
+		-webkit-box-shadow: 0 0 8px #D0D0D0;
+	}
+	</style>
+</head>
+<body>
+
+<div id="container">
+	<h1>Welcome to CodeIgniter!</h1>
+
+	<div id="body">
+		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
+
+		<p>If you would like to edit this page you'll find it located at:</p>
+		<code>application/views/welcome_message.php</code>
+
+		<p>The corresponding controller for this page is found at:</p>
+		<code>application/controllers/welcome.php</code>
+
+		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
+	</div>
+
+	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
 </div>
-</div>
+
+</body>
+</html>
