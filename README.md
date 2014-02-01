@@ -1,12 +1,16 @@
 Mentorsdojo
-----------
+===========
 
 __The code has been moved to:__
 __[Pykotech-MentorsDojo](https://github.com/pykotech/mentorsdojo "Pykotech/mentorsdojo")__ 
-removed the configs for security reasons
+
+
+Updates: 
+-------
+2014 02.01 removed the config, added to the .gitignore for security reasons
 
 setup
-=========
+-----
 
 *[TODO]*
 
