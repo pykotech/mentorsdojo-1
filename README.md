@@ -1,8 +1,8 @@
 Mentorsdojo
 ----------
 
-**The code has been moved to [Pykotech-MentorsDojo](https://github.com/pykotech/mentorsdojo "Pykotech/mentorsdojo") **
-
+__The code has been moved to:__
+__[Pykotech-MentorsDojo](https://github.com/pykotech/mentorsdojo "Pykotech/mentorsdojo")__ 
 removed the configs for security reasons
 
 setup
